@@ -699,12 +699,14 @@ while run:
             if indexa >= len(skins):
                 indexa = 0
             skin = skins[indexa]
+            player.reset(100, screen_height - 130)
             vitrina_group.sprites()[0].image = pygame.image.load(f'img/player/{skin[0]}/{skin[0]} (1).png')
         if arrowL_button.draw():
             indexa -= 1
             if indexa < 0:
                 indexa = len(skins) - 1
             skin = skins[indexa]
+            player.reset(100, screen_height - 130)
             vitrina_group.sprites()[0].image = pygame.image.load(f'img/player/{skin[0]}/{skin[0]} (1).png')
         if home_button.draw():
             money += score
